@@ -35,7 +35,7 @@ class SuperDuperCoolSocket:
     def _on_connect(self) -> None:
         """ Do not call this.
 
-        When a client is connect,
+        When a client is connecting,
         their socket object and the address will be saved in self.client.
         """
         while True:
@@ -48,9 +48,9 @@ class SuperDuperCoolSocket:
     def _receiver(self, conn: socket.socket, addr: tuple) -> None:
         """ Do not call this.
 
-        Handling the data receiving and clent disconnection.
+        Handling the data receiving and client disconnection.
         All the data will be saved into the Queue, which is in the recv_data dict.
-        When a client disconnect, they will be removed form self.client.
+        When a client disconnect, they will be removed from self.client.
 
         :param conn: A socket object usable to send and receive data.
         :param addr: The address bound to the socket of the client end.
